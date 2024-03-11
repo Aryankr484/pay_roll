@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Payroll Management Program</title>
+   <style>
+      h2{
+         text-align: center;
+         text-decoration: underline;
+      }
+      body, p {
+         font-family: verdana;
+         font-size: 16px;
+         font-weight: bold;
+      }
+      .container {
+         width: 600px;
+         clear: both;
+      }
+      .container input {
+         width: 100%;
+         clear: both;
+      }
+   </style>
+   <script>
+      function show_salary() {
+         var user = document.getElementById("user_name").value;
+         var wage = document.getElementById("daily_wage").value;
+         var working_days = document.getElementById("no_days_work").value;
+         pay= parseFloat(wage) * working_days;
+         results1 = "Employee's Name: " + user + ".";
+         results2 ="Basic Salary: INR " + pay.toFixed(2) +".";         
+         document.getElementById("demo1").innerHTML = results1;
+         document.getElementById("demo2").innerHTML = results2;
+      }
+   </script>
+</head>
+<body>
+   <div class= "container">
+      <h2>Payroll Program using JavaScript</h2>
+      <br> <br> Employee's Name
+      <input type= "text" id= "user_name" name= "user_name" placeholder= "Enter the name of employee">
+      <br>
+      <br> Daily Wage
+      <input type= "text" id= "daily_wage" name= "daily_wage" placeholder= "Enter the daily wages">
+      <br>
+      <br> Number of Days of Work
+      <input type= "text" id= "no_days_work" name= "no_days_work" placeholder= "Enter number of days worked">
+      <br>
+      <br>
+      <button onclick= "show_salary()"> Show Salary </button>
+      <br> <br> <br>
+      <section id= "demo1"> </section>
+      <section id= "demo2"> </section>
+   </div>
+</body>
+</html>
